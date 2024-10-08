@@ -1,22 +1,4 @@
-# plcconn
-This is sinmple []byte sending interface by golang
-
-## feature
-mutex, tcp connection, timeout, error handling
-
-# how to use
-go get at first
-```bash
-go get github.com/kosuke-oya/plcconn
-```
-    
-sample
-```go
 package main
-
-import (
-    "github.com/kosuke-oya/plcconn"
-)
 
 func main() {
 	ipAddress := "192.168.1.1"
@@ -32,5 +14,3 @@ func main() {
 	data := []byte{0x01, 0x02, 0x03, 0x04}
 	conn.Send(data)
 }
-
-```

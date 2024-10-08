@@ -1,0 +1,10 @@
+services:
+  plcconn:
+    image: "plcconn"
+    container_name: plcconn
+    tty: true
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
