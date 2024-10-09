@@ -24,7 +24,7 @@ func main() {
 	timeOutSecond := 5
 
 	// create plc connection
-	conn := NewPlcConn(ipAddress, port, timeOutSecond)
+	conn := plcconn.NewPlcConn(ipAddress, port, timeOutSecond)
 	// defer close connection
 	defer conn.Close()
 
