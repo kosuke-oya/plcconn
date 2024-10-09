@@ -30,7 +30,13 @@ func main() {
 
 	// send []byte data to plc
 	data := []byte{0x01, 0x02, 0x03, 0x04}
-	conn.Send(data)
+	r,err := conn.Send(data)
+        if err != nil {
+           fmt.Println(err)
+        }
+
+        // show result
+        fmt.Printf("%d",r)
 }
 
 ```
